@@ -1434,7 +1434,7 @@ int encoder_encode_video(encoder_context_t *encoder_ctx, void *input_frame)
 		/*convert default yuyv to y420p (libav input format)*/		
 		switch(video_codec_data->codec_context->pix_fmt)
 		{
-			case PIX_FMT_YUVJ420P:
+			case AV_PIX_FMT_YUVJ420P:
 				yuv422to420p(encoder_ctx, input_frame);
 				break;
 			default:
